@@ -44,6 +44,20 @@ button {
 }
 
 /* Main page */
+
+.curve-edit {
+    content: '';
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(135deg, #ff0081, #6827b0);
+    border-radius: 0 0 75% 75%/ 0 0 100% 100%;
+    transform: scaleX(1.5);
+    z-index: -1;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -113,6 +127,62 @@ input:nth-child(2) {
     flex-direction: column;
 }
 
+.marketing-title {
+    font-size: 0.9rem;
+}
 
 
 
+.flex-marketing{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.flex-marketing-item {
+    padding: 1rem;
+    margin:0.5rem;
+    width: 300px;
+
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+.third-section {
+    margin: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   background-color: #E37151;
+   color: white;
+}
+
+.third-section h1 { 
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.third-section p {
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.market {
+    background-color: #825232;
+}
+
+
+
+
+
+/* Media queries to change 
+
+-the background curve layout style
+
+
+*/
