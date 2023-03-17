@@ -8,9 +8,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    max-width: 100%;
     background-color: whitesmoke;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
@@ -37,6 +37,7 @@ button {
     border:none;
     border-radius: 10px;
     color:white;
+    cursor: pointer;
 }
 
 h2 {
@@ -183,13 +184,21 @@ input:nth-child(2) {
 }
 
 .third-section p {
+    max-width: 350px;
     padding: 1rem;
     margin: 2rem;
 }
 
 .market {
-    background-color: #825232;
+    background-color: #825232d4;
+    transition: background-color 0.2s ease-out;
 }
+
+.market:hover {
+    background-color: #7c4a29;
+}
+
+/* FAQ section */
 
 
 
