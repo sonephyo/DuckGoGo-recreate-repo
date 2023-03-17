@@ -9,18 +9,89 @@
 body {
     font-family: 'Roboto', sans-serif;
     max-width: 100%;
+    background-color: whitesmoke;
 }
 
 
+/* Utility Format */
+
+h1 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-weight:900;
+    line-height: 2.5rem;
+}
+
+p {
+    font-weight: 100;
+    font-size: 1.25rem;
+}
+
+/* Reusable code */
+
+.nowrap {
+    white-space: nowrap;
+}
 
 /* Main page */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-input {
-    margin: 0.5rem;
-    font-size: 150%;
+.title {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title img {
+    text-align: center;
+}
+
+.title p {
+    padding: 0.5rem;
+    font-size: 200%;
+}
+
+/* Input bar */
+
+.main-input {
+    width: 50%;
+    min-width: 300px;
+    max-width: 700px;
+    border: 1px solid black;
+    display:flex;
+}
+
+.main-input input {
+    font-size: 100%;
+    padding: 5px;
+}
+input:nth-child(1) {
+    width: 80%;
+}
+input:nth-child(2) {
+    width: 20%;
+    min-width: 5rem;
+}
+
+.main-text {
+    margin: 2rem;
+}
+
+.properties {
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.properties li {
+}
+.properties li:marker {
+    color: blue;
 }
