@@ -13,6 +13,23 @@ body {
     overflow-y: auto;
 }
 
+a[href^="#"] {
+    scroll-behavior: smooth;
+}
+
+
+.curve-edit {
+    content: '';
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff0081, #6827b0);
+    border-radius: 0 0 80% 80%/ 0 0 100% 100%;
+    transform: scaleX(1.5);
+    z-index: -1;
+}
 
 /* Utility Format */
 
@@ -53,18 +70,7 @@ h2 {
 
 /* Main page */
 
-.curve-edit {
-    content: '';
-    top: 0;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #ff0081, #6827b0);
-    border-radius: 0 0 80% 80%/ 0 0 100% 100%;
-    transform: scaleX(1.5);
-    z-index: -1;
-}
+
 
 main {
     display: flex;
@@ -87,6 +93,10 @@ main {
 .title p {
     padding: 0.5rem;
     font-size: 200%;
+}
+
+.monster-pic {
+    width: 50%;
 }
 
 /* Input bar */
@@ -200,13 +210,87 @@ input:nth-child(2) {
 
 /* FAQ section */
 
+.faq {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    margin-top: 2rem;
+}
 
+.faq h1 {
+    text-align: center;
+}
+
+.question-box {
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.question-sub-box {
+    width: 50%;
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.faq-question {
+    padding: 1rem;
+    margin-top:1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color:inherit;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.faq-question .remove {
+    display: none;
+}
+
+.faq-answer {
+
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 650ms;
+
+}
+
+.faq-answer p {
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.question-sub-box:target .faq-answer {
+    max-height: 30rem;
+}
+
+.question-sub-box:target .faq-question .add {
+    display: none;
+}
+
+.question-sub-box:target .faq-question .remove {
+    display: block;
+}
 
 
 
 /* Media queries to change 
 
 -the background curve layout style
+-monster pic bigger when screen smaller
 
 
 */
